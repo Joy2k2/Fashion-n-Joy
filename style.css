@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fafafa;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #395ce8;
+  padding: 15px 40px;
+}
+
+.nav-links a {
+  color: #f9f9f9;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff4081;
+}
+
+.logo {
+  color: white;
+  font-size: 1.6em;
+}
+
+.hero {
+  background: linear-gradient(to right, #ff4081, #ec407a);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #ff4081;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: #ffe3ec;
+}
+
+.featured {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgb(234, 231, 165);
+  width: 280px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.about, .contact {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-grid {
+    flex-direction: column;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+}
